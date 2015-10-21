@@ -1,0 +1,42 @@
+{
+  "name": "is-changelog-path",
+  "version": "1.0.0",
+  "description": "Check if a file path is a CHANGELOG file",
+  "repository": "shinnn/is-changelog-path",
+  "author": "Shinnosuke Watanabe (https://github.com/shinnn)",
+  "scripts": {
+    "pretest": "eslint --config @shinnn/node index.js test.js",
+    "test": "tap --coverage --reporter=spec test.js",
+    "test-only": "tap --reporter=spec test.js"
+  },
+  "license": "MIT",
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "check",
+    "if",
+    "boolean",
+    "filename",
+    "name",
+    "path",
+    "log",
+    "changelog",
+    "change-log",
+    "updates",
+    "releases",
+    "release-history",
+    "history",
+    "releasenote",
+    "match"
+  ],
+  "dependencies": {
+    "changelog-filename-regex": "^1.0.0"
+  },
+  "devDependencies": {
+    "@shinnn/eslint-config-node": "^1.0.1",
+    "eslint": "^1.9.0",
+    "nyc": "^3.2.2",
+    "tap": "^2.2.1"
+  }
+}
