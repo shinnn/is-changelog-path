@@ -4,10 +4,10 @@
 [![Build Status](https://travis-ci.org/shinnn/is-changelog-path.svg?branch=master)](https://travis-ci.org/shinnn/is-changelog-path)
 [![Build status](https://ci.appveyor.com/api/projects/status/0idgfgivh7rn7jnr/branch/master?svg=true)](https://ci.appveyor.com/project/ShinnosukeWatanabe/is-changelog-path/branch/master)
 [![Coverage Status](https://img.shields.io/coveralls/shinnn/is-changelog-path.svg)](https://coveralls.io/r/shinnn/is-changelog-path)
-[![Dependency Status](https://img.shields.io/david/shinnn/is-changelog-path.svg?label=deps)](https://david-dm.org/shinnn/is-changelog-path)
-[![devDependency Status](https://img.shields.io/david/dev/shinnn/is-changelog-path.svg?label=devDeps)](https://david-dm.org/shinnn/is-changelog-path#info=devDependencies)
+[![Dependency Status](https://david-dm.org/shinnn/is-changelog-path.svg)](https://david-dm.org/shinnn/is-changelog-path)
+[![Dependency Status](https://david-dm.org/shinnn/is-changelog-path.svg)](https://david-dm.org/shinnn/is-changelog-path)
 
-Check if a file [path](http://www.linfo.org/path.html) is a CHANGELOG file
+Check if a given string looks like a CHANGELOG file [path](http://www.linfo.org/path.html)
 
 ```javascript
 const isChangelogPath = require('is-changelog-path');
@@ -45,8 +45,31 @@ isChangelogPath('/Users/you/release-note.md'); //=> true
 
 isChangelogPath('release/-note.md'); //=> false
 isChangelogPath('release-note.md.js'); //=> false
+isChangelogPath('release-note.md/'); //=> false
 
 isChangelogPath(''); //=> false
+```
+
+### isChangelogPath.posix(*filePath*)
+
+*filePath*: `String` (a file path)  
+Return: `Boolean`
+
+Always interact in a [posix](https://www.opengroup.org/austin/papers/posix_faq.html) compatible way.
+
+```javascript
+isChangelogPath.posix('dir\\history.txt'); //=> false
+```
+
+### isChangelogPath.win32(*filePath*)
+
+*filePath*: `String` (a file path)  
+Return: `Boolean`
+
+Always interact in a [win32](https://msdn.microsoft.com/library/cc433218) compatible way.
+
+```javascript
+isChangelogPath.win32('dir\\history.txt'); //=> true
 ```
 
 ## License

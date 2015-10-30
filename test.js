@@ -6,7 +6,7 @@ const isChangelogPath = require('.');
 const tap = require('tap');
 
 tap.test('isChangelogPath', t => {
-  t.plan(8);
+  t.plan(9);
 
   t.strictEqual(isChangelogPath.name, 'isChangelogPath', 'should have a function name.');
 
@@ -35,6 +35,12 @@ tap.test('isChangelogPath', t => {
   );
 
   t.strictEqual(
+    isChangelogPath(path.normalize('dir/changelog/')),
+    false,
+    'should return `false` if the path looks like a directory.'
+  );
+
+  t.strictEqual(
     isChangelogPath(''),
     false,
     'should return `false` if it takes an empty string.'
@@ -50,5 +56,29 @@ tap.test('isChangelogPath', t => {
     () => isChangelogPath(),
     new TypeError('undefined is not a string. Expected a file path.'),
     'should throw a type error when it takes no arguments.'
+  );
+});
+
+tap.test('isChangelogPath.posix', t => {
+  t.plan(2);
+
+  t.strictEqual(isChangelogPath.posix.name, 'isChangelogPathPosix', 'should have a function name.');
+
+  t.strictEqual(
+    isChangelogPath.posix('dir\\changelog'),
+    false,
+    'should always treat the path in a posix compatible way.'
+  );
+});
+
+tap.test('isChangelogPath.win32', t => {
+  t.plan(2);
+
+  t.strictEqual(isChangelogPath.win32.name, 'isChangelogPathWin32', 'should have a function name.');
+
+  t.strictEqual(
+    isChangelogPath.win32('dir\\changelog'),
+    true,
+    'should always treat the path in a win32 compatible way.'
   );
 });
