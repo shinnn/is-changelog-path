@@ -35,9 +35,9 @@
     "is-dir-like-path": "^1.0.1"
   },
   "devDependencies": {
-    "@shinnn/eslint-config-node": "^1.0.1",
-    "eslint": "^1.10.3",
-    "nyc": "^5.0.1",
-    "tap": "^3.1.2"
+    "@shinnn/eslint-config-node": "^2.0.0",
+    "eslint": "^2.7.0",
+    "nyc": "^6.1.1",
+    "tap": "^5.7.0"
   }
 }
