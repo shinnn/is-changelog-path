@@ -4,8 +4,8 @@
 [![Build Status](https://travis-ci.org/shinnn/is-changelog-path.svg?branch=master)](https://travis-ci.org/shinnn/is-changelog-path)
 [![Build status](https://ci.appveyor.com/api/projects/status/0idgfgivh7rn7jnr/branch/master?svg=true)](https://ci.appveyor.com/project/ShinnosukeWatanabe/is-changelog-path/branch/master)
 [![Coverage Status](https://img.shields.io/coveralls/shinnn/is-changelog-path.svg)](https://coveralls.io/r/shinnn/is-changelog-path)
-[![Dependency Status](https://david-dm.org/shinnn/is-changelog-path.svg)](https://david-dm.org/shinnn/is-changelog-path)
-[![Dependency Status](https://david-dm.org/shinnn/is-changelog-path.svg)](https://david-dm.org/shinnn/is-changelog-path)
+[![dependencies Status](https://david-dm.org/shinnn/is-changelog-path/status.svg)](https://david-dm.org/shinnn/is-changelog-path)
+[![devDependencies Status](https://david-dm.org/shinnn/is-changelog-path/dev-status.svg)](https://david-dm.org/shinnn/is-changelog-path?type=dev)
 
 Check if a given string looks like a CHANGELOG file [path](http://www.linfo.org/path.html)
 
@@ -74,6 +74,6 @@ isChangelogPath.win32('dir\\history.txt'); //=> true
 
 ## License
 
-Copyright (c) 2015 [Shinnosuke Watanabe](https://github.com/shinnn)
+Copyright (c) 2015 - 2016 [Shinnosuke Watanabe](https://github.com/shinnn)
 
 Licensed under [the MIT License](./LICENSE).
