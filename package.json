@@ -5,9 +5,9 @@
   "repository": "shinnn/is-changelog-path",
   "author": "Shinnosuke Watanabe (https://github.com/shinnn)",
   "scripts": {
-    "pretest": "eslint --fix --config @shinnn/node index.js test.js",
-    "test": "tap --coverage --reporter=spec test.js",
-    "test-only": "tap --reporter=spec test.js"
+    "pretest": "eslint --fix --format=codeframe index.js test.js",
+    "test": "npm run-script test-only --silent -- --coverage",
+    "test-only": "tap test.js"
   },
   "license": "MIT",
   "files": [
@@ -36,8 +36,11 @@
   },
   "devDependencies": {
     "@shinnn/eslint-config-node": "^3.0.0",
-    "eslint": "^3.5.0",
-    "nyc": "^8.1.0",
-    "tap": "^7.1.2"
+    "eslint": "^3.13.0",
+    "nyc": "^10.0.0",
+    "tap": "^9.0.2"
+  },
+  "eslintConfig": {
+    "extends": "@shinnn/node"
   }
 }
