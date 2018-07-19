@@ -4,4 +4,4 @@ install:
   - ps: Install-Product node Stable
   - npm install
 build: off
-test_script: npm run-script test-only
+test_script: node test.js
