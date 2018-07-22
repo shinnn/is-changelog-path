@@ -5,7 +5,7 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/0idgfgivh7rn7jnr/branch/master?svg=true)](https://ci.appveyor.com/project/ShinnosukeWatanabe/is-changelog-path/branch/master)
 [![Coverage Status](https://img.shields.io/coveralls/shinnn/is-changelog-path.svg)](https://coveralls.io/github/shinnn/is-changelog-path)
 
-Check if a given string looks like a CHANGELOG file path
+Check if a given `string` looks like a CHANGELOG file path
 
 ```javascript
 const isChangelogPath = require('is-changelog-path');
@@ -37,10 +37,10 @@ const isChangelogPath = require('is-changelog-path');
 
 ### isChangelogPath(*filePath*)
 
-*filePath*: `String` (a file path)  
+*filePath*: `string` (a file path)  
 Return: `boolean`
 
-It returns `true` if [the last portion of a given path](https://nodejs.org/api/path.html#path_path_basename_path_ext) matches [changelog-filename-regex](https://github.com/shinnn/changelog-filename-regex), otherwise `false`.
+It returns `true` if it takes a `string` whose [last path portion](https://nodejs.org/api/path.html#path_path_basename_path_ext) matches [changelog-filename-regex](https://github.com/shinnn/changelog-filename-regex), otherwise `false`.
 
 ```javascript
 const isChangelogPath = require('is-changelog-path');
@@ -51,30 +51,9 @@ isChangelogPath('/Users/shinnn/release-note.md'); //=> true
 isChangelogPath('release/-note.md'); //=> false
 isChangelogPath('release-note.md.js'); //=> false
 isChangelogPath('release-note.md/'); //=> false
+isChangelogPath('release-note.md\\'); //=> false
 
 isChangelogPath(''); //=> false
-```
-
-### isChangelogPath.posix(*filePath*)
-
-*filePath*: `string` (a file path)  
-Return: `boolean`
-
-Always interact in a [posix](https://www.opengroup.org/austin/papers/posix_faq.html) compatible way.
-
-```javascript
-isChangelogPath.posix('dir\\history.txt'); //=> false
-```
-
-### isChangelogPath.win32(*filePath*)
-
-*filePath*: `string` (a file path)  
-Return: `boolean`
-
-Always interact in a [win32](https://msdn.microsoft.com/library/cc433218) compatible way.
-
-```javascript
-isChangelogPath.win32('dir\\history.txt'); //=> true
 ```
 
 ## License
