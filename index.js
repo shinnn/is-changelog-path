@@ -6,7 +6,7 @@ const chagelogFilenameRegex = require('changelog-filename-regex');
 
 module.exports = function isChangelogPath(path) {
 	if (typeof path !== 'string') {
-		throw new TypeError(`${path} is not a string. Expected a file path.`);
+		return false;
 	}
 
 	if (path.endsWith(posixSep)) {
