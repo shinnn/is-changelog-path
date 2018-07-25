@@ -19,4 +19,3 @@ module.exports = function isChangelogPath(path) {
 
 	return chagelogFilenameRegex.test(basename(path));
 };
-

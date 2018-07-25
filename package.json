@@ -1,6 +1,6 @@
 {
 	"name": "is-changelog-path",
-	"version": "2.0.0-0",
+	"version": "2.0.0-1",
 	"description": "Check if a given value is a `string` that looks like a CHANGELOG file path",
 	"repository": "shinnn/is-changelog-path",
 	"author": "Shinnosuke Watanabe (https://github.com/shinnn)",
