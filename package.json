@@ -4,7 +4,7 @@
 	"description": "Check if a given value is a `string` that looks like a CHANGELOG file path",
 	"repository": "shinnn/is-changelog-path",
 	"author": "Shinnosuke Watanabe (https://github.com/shinnn)",
-	"license": "MIT",
+	"license": "ISC",
 	"scripts": {
 		"pretest": "eslint .",
 		"test": "nyc --reporter=html --reporter=text node test.js"
