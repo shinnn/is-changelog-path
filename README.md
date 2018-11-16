@@ -2,7 +2,6 @@
 
 [![npm version](https://img.shields.io/npm/v/is-changelog-path.svg)](https://www.npmjs.com/package/is-changelog-path)
 [![Build Status](https://travis-ci.org/shinnn/is-changelog-path.svg?branch=master)](https://travis-ci.org/shinnn/is-changelog-path)
-[![Build status](https://ci.appveyor.com/api/projects/status/0idgfgivh7rn7jnr/branch/master?svg=true)](https://ci.appveyor.com/project/ShinnosukeWatanabe/is-changelog-path/branch/master)
 [![Coverage Status](https://img.shields.io/coveralls/shinnn/is-changelog-path.svg)](https://coveralls.io/github/shinnn/is-changelog-path)
 
 Check if a given value is a `string` that looks like a CHANGELOG file path
